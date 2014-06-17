@@ -7,7 +7,7 @@ import parser
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print "USAGE: %s <program source code path>"
+        print "USAGE: %s <program source code path>" % sys.argv[0]
         exit(1)
     result = anal.analyze(parser.parse_file(sys.argv[1]))
     print "[RESULT]"
