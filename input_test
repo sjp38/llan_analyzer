@@ -1,0 +1,23 @@
+let first_inputs [1 2 3 4 5 6]
+let second_inputs [homer loves beer]
+
+while [car first_inputs] [
+    let input1 [car first_inputs]
+    let first_inputs [cdr first_inputs]
+
+    while [car second_inputs] [
+        let input2 [car second_inputs]
+        let second_inputs [cdr second_inputs]
+
+        let trials [1 1 1 1 1]
+        while [car trials] [
+            let trials [cdr trials]
+            if [do [llan_bench input1 input2]] [
+                pass
+            ] [
+                let trials []
+            ]
+        ]
+    ]
+    let second_inputs [homer loves beer]
+]
