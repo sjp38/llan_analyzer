@@ -11,5 +11,7 @@ if __name__ == "__main__":
         exit(1)
     result = anal.analyze(parser.parse_file(sys.argv[1]))
     print "[RESULT]"
-    for key in result.keys():
+    for key in sorted(result.keys()):
         print "%s: %s" % (key, result[key])
+        if result[key].type_ == anal.TOP:
+            print "\tDangerous! This example may not end in reasonable time!!"

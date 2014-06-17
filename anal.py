@@ -24,7 +24,10 @@ class aval:
         return self.__str__()
 
     def __str__(self):
-        return "[type: %s, value: %s]" % (self.type_, self.value)
+        if self.type_ == NBR:
+            return "[type: %s, value: %s]" % (self.type_, self.value)
+        else:
+            return "[type: %s]" % self.type_
 
 def val_add(val1, val2):
     if val1.type_ == BOT:

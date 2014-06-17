@@ -1,0 +1,5 @@
+let inputs [1 2 3 4 5 6]
+
+while [car inputs] [
+    let inputs [append inputs [1 2 3 4]]
+]
