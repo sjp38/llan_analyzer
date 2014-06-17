@@ -4,12 +4,9 @@
 
 __author__ = "SeongJae Park"
 __email__ = "sj38.park@gmail.com"
-__copyright__ = "Copyright (c) 2014, SeongJae Park"
-__license__ = "GPLv3"
 
 import sys
 
-# Make raw expression(python string) to list(python list with strings)
 def parse(expr, depth = 1):
     if not expr.startswith("[") and depth == 1:
         expr = "[" + expr + "]"

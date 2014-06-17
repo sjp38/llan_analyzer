@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+""" analyze code """
+
+__author__ = "SeongJae Park"
+__email__ = "sj38.park@gmail.com"
+
 import copy
 
 import parser
@@ -161,7 +166,8 @@ def trans(program, memory):
         return memory
     elif operator == 'while':
         def f(m):
-            return mem_join(memory, trans(operand[1], notempty(operand[0], m)))
+            return mem_join(memory,
+                            trans(operand[1], notempty(operand[0], m)))
         return notempty(operand[0], fix(f))
     print "UNACCEPTABLE!!!!!", cmd
     exit(1)

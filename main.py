@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+""" Entry point for analyzer execution """
+
+__author__ = "SeongJae Park"
+__email__ = "sj38.park@gmail.com"
+
 import sys
 
 import anal
@@ -14,4 +19,4 @@ if __name__ == "__main__":
     for key in sorted(result.keys()):
         print "%s: %s" % (key, result[key])
         if result[key].type_ == anal.TOP:
-            print "\tDangerous! This example may not end in reasonable time!!"
+            print "\tDangerous! This may not end in reasonable time!!"
